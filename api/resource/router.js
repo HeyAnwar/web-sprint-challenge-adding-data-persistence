@@ -11,6 +11,7 @@ const checkName = (req, res, next) => {
         res.status(400).json({
             message: 'Resource name is required'
         })
+        next()
     }else {
         next()
     }

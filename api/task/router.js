@@ -11,10 +11,12 @@ const checkName = (req, res, next) => {
         res.status(400).json({
             message: 'Task name is required'
         })
+        next()
     }else if (!task_description) {
             res.status(400).json({
                 message: 'Task description is required'
             })
+            next()
         }else {
             next()
         }
